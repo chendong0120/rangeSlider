@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript" src="src/rangeSlider.js"></script>
+    <script type="application/javascript">
+      $.ready(function () {
+        const app = document.getElementById('app');
+        const rangeSlider = new RangeSlider(app, {
+          callback: function (min, max) {
+            console.log(min, max);
+          }
+        });
+        console.log('end rangeSlider');
+        window.addEventListener('resize', function (ev) {
+          rangeSlider.reinit()
+        });
+      });
+    </script>
+</head>
+<body>
+<div class="app">
+
+</div>
+</body>
+</html>
